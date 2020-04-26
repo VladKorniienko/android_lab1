@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1DEE9"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/hamCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Royal ham \n 2$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mascarponeCheck"
+        app:layout_constraintTop_toBottomOf="@+id/mozzarellaCheck" />
+
+    <CheckBox
+        android:id="@+id/champCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Champignons \n 1$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/baconCheck"
+        app:layout_constraintTop_toBottomOf="@+id/tomatoesCheck" />
+
+    <CheckBox
+        android:id="@+id/olivesCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Green olives  \n 1$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pepperoniCheck"
+        app:layout_constraintTop_toBottomOf="@+id/champCheck" />
+
+    <TextView
+        android:id="@+id/ingredientsText"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ingredients"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/parmesanCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeGroup" />
+
+    <TextView
+        android:id="@+id/pizzaText"
+        android:layout_width="261dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layerType="none"
+        android:paddingLeft="15dp"
+        android:paddingTop="50dp"
+        android:paddingRight="15dp"
+        android:text="Pizza order"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="148dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Pizza logo"
+        app:layout_constraintBottom_toTopOf="@+id/sizeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza_logo" />
+
+    <TextView
+        android:id="@+id/sizeText"
+        android:layout_width="400dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Size of the pizza"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/sizeGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaText" />
+
+    <RadioGroup
+        android:id="@+id/sizeGroup"
+        android:layout_width="398dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/ingredientsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeText">
+
+        <RadioButton
+            android:id="@+id/size30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sizeClicked"
+            android:text="30 cm - 6$" />
+
+        <RadioButton
+            android:id="@+id/size40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sizeClicked"
+            android:text="40 cm - 10$" />
+
+        <RadioButton
+            android:id="@+id/size50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sizeClicked"
+            android:text="50 cm - 15$" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/parmesanCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="ingredientsClicked"
+        android:text="Parmesan cheese \n 1$"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsText" />
+
+    <CheckBox
+        android:id="@+id/mozzarellaCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="itemClicked"
+        android:text="Mozzarella cheese \n 1$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/parmesanCheck"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsText" />
+
+    <CheckBox
+        android:id="@+id/mascarponeCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Mascarpone cheese \n 1$"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parmesanCheck" />
+
+    <CheckBox
+        android:id="@+id/bavarianCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Bavarian Salami \n 1$"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mascarponeCheck" />
+
+    <CheckBox
+        android:id="@+id/baconCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Bacon \n 1$"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bavarianCheck" />
+
+    <CheckBox
+        android:id="@+id/pepperoniCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Pickled pepperoni \n 1$"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baconCheck" />
+
+    <CheckBox
+        android:id="@+id/tomatoesCheck"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="ingredientsClicked"
+        android:text="Fresh tomatoes  \n 1$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bavarianCheck"
+        app:layout_constraintTop_toBottomOf="@+id/hamCheck" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="Total:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pepperoniCheck"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#30B35C"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/olivesCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
